@@ -14,9 +14,13 @@ const consultingSchema = new Schema(
 			type: String,
 			required: true,
 		},
-		select: {
+		selects: {
 			type: String,
 			required: true,
+		},
+		ip: {
+			type: String,
+			required: false,
 		},
 	},
 	{
