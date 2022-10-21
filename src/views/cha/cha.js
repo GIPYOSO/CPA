@@ -173,7 +173,8 @@ btnUp.addEventListener("click", async (e) => {
         agree2.focus();
         return false;
     }
-    const datas = { name, phone, car, selects }
+    const { city, ip } = await Api.get('https://ipinfo.io/json?token=011cf205a26a21')
+    const datas = { name, phone, car, selects, city, ip }
     const postData = await Api.post('http://localhost:8080/api/consulting', datas);
     console.log(postData);
 })

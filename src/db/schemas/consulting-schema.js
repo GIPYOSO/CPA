@@ -22,6 +22,14 @@ const consultingSchema = new Schema(
 			type: String,
 			required: false,
 		},
+		city: {
+			type: String,
+			required: false,
+		},
+		kr_time: {
+			type: String,
+			required: true,
+		},
 	},
 	{
 		collection: 'consulting',
