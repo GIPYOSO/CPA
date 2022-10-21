@@ -4,6 +4,7 @@ import {
 	viewsRouter,
 	consultingRouter,
 	userRouter,
+	visitorRouter
 } from './routers/index.js';
 const app = express();
 
@@ -21,5 +22,6 @@ app.use(viewsRouter);
 
 app.use('/api', consultingRouter);
 app.use('/api', userRouter);
+app.use('/api', visitorRouter);
 
 export { app };
