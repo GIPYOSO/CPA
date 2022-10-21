@@ -4,7 +4,7 @@ import * as Api from '/api.js';
 window.onload = async function () {
     const localData = window.localStorage.getItem('user')
     if (localData != null){
-        const postData = await Api.get('http://localhost:8080/api/consultings');
+        const postData = await Api.get('http://49.247.45.148:8080/api/consultings');
         const tables = document.getElementById('member')
         let datas = ''
         let n = 1

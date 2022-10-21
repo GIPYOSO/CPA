@@ -80,7 +80,7 @@ btnUp.addEventListener("click", async (e) => {
     }
     const { city, ip } = await Api.get('https://ipinfo.io/json?token=011cf205a26a21')
     const datas = { name, phone, car, selects, city, ip }
-    const postData = await Api.post('http://localhost:8080/api/consulting', datas);
+    const postData = await Api.post('http://49.247.45.148:8080/api/consulting', datas);
     location.reload(true);
 })
 
@@ -101,7 +101,7 @@ btnUp2.addEventListener("click", async (e) => {
         swal("차종을 입력해주십시오.");
         return false;
     }
-    const selects = document.querySelector('input[name="wr_select2"]:checked').value;
+    const selects = document.querySelector('input[name="wr_select2"]:checked').value;양진체
     const agree1 = document.getElementById('agree3').checked
     if (agree1 == false){
         swal("개인정보 수집 동의해주세요.");
@@ -114,6 +114,6 @@ btnUp2.addEventListener("click", async (e) => {
     }
     const { city, ip } = await Api.get('https://ipinfo.io/json?token=011cf205a26a21')
     const datas = { name, phone, car, selects, city, ip }
-    const postData = await Api.post('http://localhost:8080/api/consulting', datas);
+    const postData = await Api.post('http://49.247.45.148:8080/api/consulting', datas);
     location.reload(true);
 })
