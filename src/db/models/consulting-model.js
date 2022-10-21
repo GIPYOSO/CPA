@@ -1,7 +1,8 @@
-import { model } from 'mongoose';
-import { consultingSchema } from '../schemas/consulting-schema';
+import pkg from 'mongoose';
+const { model } = pkg;
+import { consultingSchema } from '../schemas/consulting-schema.js';
 import moment from 'moment';
-require('moment-timezone');
+import 'moment-timezone';
 moment.tz.setDefault("Asia/Seoul");
 
 

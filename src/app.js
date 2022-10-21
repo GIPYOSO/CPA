@@ -4,7 +4,7 @@ import {
 	viewsRouter,
 	consultingRouter,
 	userRouter,
-} from './routers';
+} from './routers/index.js';
 const app = express();
 
 // CORS 에러 방지

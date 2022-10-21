@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { userService } from '../services';
+import { userService } from '../services/index.js';
 import bcrypt from 'bcrypt';
 
 const userRouter = Router();

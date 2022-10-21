@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { consultingService } from '../services';
+import { consultingService } from '../services/index.js';
 import requestIp from 'request-ip';
 const consultingRouter = Router();
 

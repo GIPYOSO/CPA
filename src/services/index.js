@@ -1,2 +1,2 @@
-export * from './consulting-service';
-export * from './user-service';
+export * from './consulting-service.js';
+export * from './user-service.js';
