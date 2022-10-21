@@ -101,7 +101,7 @@ btnUp2.addEventListener("click", async (e) => {
         swal("차종을 입력해주십시오.");
         return false;
     }
-    const selects = document.querySelector('input[name="wr_select2"]:checked').value;양진체
+    const selects = document.querySelector('input[name="wr_select2"]:checked').value;
     const agree1 = document.getElementById('agree3').checked
     if (agree1 == false){
         swal("개인정보 수집 동의해주세요.");
