@@ -18,6 +18,11 @@ export class ConsultingModel {
 		const NewConsulting = await Consulting.create(data);
 		return NewConsulting;
 	}
+	async counsultings() {
+		const NewConsulting = await Consulting.find({});
+		return NewConsulting;
+	}
+	
 }
 
 const consultingModel = new ConsultingModel();

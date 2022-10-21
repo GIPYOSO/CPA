@@ -3,6 +3,13 @@
 
 /* 본고딕 웹폰트 가져오기 180124 morenvy.com */ 
 /* Noto Sans KR (korean) http://www.google.com/fonts/earlyaccess */ 
+@font-face {
+  font-family: '양진체';
+  src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @font-face { 
   font-family: 'Noto Sans KR'; 
   font-style: normal; 
@@ -55,19 +62,19 @@
 
 /* 초기화 */
 html {overflow-y:scroll}
-body {margin:0;padding:0;font-size:0.75em;font-family: 'Noto Sans KR', sans-serif;background:#fff; min-width:320px}
+body {margin:0;padding:0;font-size:0.75em;font-family: '양진체', sans-serif;background:#fff; min-width:320px}
 html, h1, h2, h3, h4, h5, h6, form, fieldset, img {margin:0;padding:0;border:0}
-h1, h2, h3, h4, h5, h6 {font-size:1em;font-family: 'Noto Sans KR', sans-serif}
+h1, h2, h3, h4, h5, h6 {font-size:1em;font-family: '양진체', sans-serif}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
 
 ul, dl,dt,dd {margin:0;padding:0;list-style:none}
 legend {position:absolute;margin:0;padding:0;font-size:0;line-height:0;text-indent:-9999em;overflow:hidden}
 label, input, button, select, img {vertical-align:middle;font-size:1em}
-input, button {margin:0;padding:0;font-family: 'Noto Sans KR', sans-serif;font-size:1em}
+input, button {margin:0;padding:0;font-family: '양진체', sans-serif;font-size:1em}
 input[type="submit"] {cursor:pointer}
 button {cursor:pointer}
 
-textarea, select {font-family: 'Noto Sans KR', sans-serif;font-size:1em}
+textarea, select {font-family: '양진체', sans-serif;font-size:1em}
 select {margin:0}
 p {margin:0;padding:0;word-break:break-all}
 hr {display:none}
@@ -147,8 +154,7 @@ img {width:100%; height:auto}
 
 #wrap {}
 #wrap:after {display:block;visibility:hidden;clear:both;content:""}
-
-.hd {padding:50px 0; background:#fffcfb}
+.hd {padding:50px 0;}
 .hd:after {display:block;visibility:hidden;clear:both;content:""}
 .hd .logo {float:left}
 .hd .logo:after {display:block;visibility:hidden;clear:both;content:""}
@@ -168,11 +174,14 @@ img {width:100%; height:auto}
 .mrs {display:none}
 @media screen and (max-width:1200px) {
 img {width:100%; height:auto}
+.main_img { width: 30% !important; }
+.four { padding-top: 25px !important; width: 30%; }
+.one { margin-top: 20px; }
 .pc {display:none}
 .mrs {display:block}
 .area {width:100%}
 .hd {padding:10px 20px}
-.hd .logo img {height:40px; width:auto}
+.hd .logo img {height:40px; width:auto !important;}
 .hd .sop:after {display:block;visibility:hidden;clear:both;content:""}
 .hd .tel {float:right; margin:0; padding-top:0}
 .hd .tel img  {height:40px; width:auto}
@@ -191,10 +200,9 @@ img {width:100%; height:auto}
 .visual .title {margin-bottom:50px}
 .visual .box {width:1000px; margin:0 auto}
 .visual .sop {margin-bottom:20px}
-.visual .sop:after {display:block;visibility:hidden;clear:both;content:""}
 .visual .sop li {float:left; width:15%; line-height:50px}
-.visual .sop li:nth-child(2n) {width:35%}
-.visual .sop li p {font-size:24px; color:#333; font-weight:400}
+.visual .sop li:nth-child(2n) {width:35%; padding-bottom: 10px;}
+.visual .sop li p {font-size:24px; color:black; font-weight:400}
 .visual .sop li dt {float:left; margin-right:20px}
 .visual .sop li dt:last-child {margin-right:0}
 .visual .sop li dt span {font-size:17px}
@@ -202,19 +210,26 @@ img {width:100%; height:auto}
 .visual .sop .ipfull {display:inline-block; width:100%; height:50px; line-height:50px; padding:0 10px; color:#333; font-weight:400; border:1px solid #e5e5e5; font-size:17px}
 .visual .sop button {display:inline-block; width:100%; height:50px; line-height:50px; color:#fff; font-weight:400; border:0; font-size:17px; padding:0 10px}
 .visual .agrees {width:100%}
-.visual .agrees:after {display:block;visibility:hidden;clear:both;content:""}
+.visual .agrees::before {display:block;visibility:hidden;clear:both;content:""; padding-top: 15px;}
 .visual .agrees span {margin-right:20px}
 .visual .agrees span:last-child {margin-right:0}
 .visual .btns {width:30% ;margin:20px auto 0}
 .visual .btns:after {display:block;visibility:hidden;clear:both;content:""}
 .visual .btns button {display:inline-block; width:100%; border-radius:50px; height:70px; line-height:70px; color:#fff; font-weight:400; border:0; font-size:24px}
 @media screen and (max-width:1200px) {
-.visual {padding:50px 20px}
-.visual .title {width:75%; margin:0 auto 20px}
+.visual { padding:30px 20px;}
+.visual vo { height: 1px;}
+.visual .title {width:100%; margin:0 auto 20px;}
+.visual .titles {
+  width: 100%;
+  margin: 0 auto 20px;
+  padding-right: 10px !important;
+  padding-top: 10% !important;
+}
 .visual .box {width:100%}
 .visual .sop {margin-bottom:10px}
 .visual .sop li { width:25%; line-height:40px}
-.visual .sop li:nth-child(2n) {width:75%}
+.visual .sop li:nth-child(2n) {width:75%; margin-bottom: 5px;}
 .visual .sop li p {font-size:1.05em}
 .visual .sop li dt {margin-right:10px}
 .visual .sop li dt span {font-size:1.05em}
@@ -239,7 +254,7 @@ img {width:100%; height:auto}
 .roll .step2 ul li span {float:left; font-size:17px}
 .roll .step2 ul li span:first-child {width:15%}
 .roll .step2 ul li span:nth-child(2) {width:70%; text-align:center}
-.roll .step2 ul li span:last-child {width:15%}
+.roll .step2 ul li span:last-child {width:15%; border-radius: 5px;}
 .roll .step2 ul li:last-child {border-bottom:0}
 .bt1 {display:inline-block; background:#fff; color:#242424; border:2px solid #242424; font-size:17px; height:30px; line-height:26px; width:100%; text-align:center}
 .bt2 {display:inline-block; background:#fff; color:#c61717; border:2px solid #c61717; font-size:17px; height:30px; line-height:26px; width:100%; text-align:center}
@@ -260,7 +275,7 @@ img {width:100%; height:auto}
 .roll .step2 ul li span:last-child {width:25%}
 }
 
-.mct_01 {position:relative; overflow:hidden; background:#f6f5f5; padding:100px 0; text-align:center}
+.mct_01 {position:relative; overflow:hidden; background:white; padding:100px 0; text-align:center}
 .mct_01:after {display:block;visibility:hidden;clear:both;content:""}
 .mct_01 .imgs {position:relative; z-index:2}
 .mct_01 .object {position:absolute; left:0; top:0; z-index:1}
@@ -299,6 +314,7 @@ img {width:100%; height:auto}
 .mct_04 .title {margin-bottom:50px}
 .mct_04 .box li {float:left; margin-right:10px}
 .mct_04 .box li:last-child {margin-right:0}
+.two{ margin-left: 1px !important; }
 .mct_04 .box ul {
   display: table;
   margin-left: auto;
@@ -308,7 +324,9 @@ img {width:100%; height:auto}
 .mct_04 {padding:50px 20px}
 .mct_04 .title {margin-bottom:20px}
 .mct_04 .box ul {width:100%}
+.mct_04 .box ul {margin-right: 0 !important;}
 .mct_04 .box li {width:49%; margin-right:2%; margin-bottom:2%}
+.mct_04 .box .three li {width:32%; margin-right:2%; margin-bottom:2%}
 .mct_04 .box li:nth-child(2n) {margin:0}
 }
 
@@ -317,9 +335,8 @@ img {width:100%; height:auto}
 .mct_05 .title {margin-bottom:50px}
 .mct_05 .box {width:1000px; margin:0 auto}
 .mct_05 .sop {margin-bottom:20px}
-.mct_05 .sop:after {display:block;visibility:hidden;clear:both;content:""}
 .mct_05 .sop li {float:left; width:15%; line-height:50px}
-.mct_05 .sop li:nth-child(2n) {width:35%}
+.mct_05 .sop li:nth-child(2n) {width:35%; padding-bottom: 10px;}
 .mct_05 .sop li p {font-size:24px; color:#fff; font-weight:400}
 .mct_05 .sop li dt {float:left; margin-right:20px}
 .mct_05 .sop li dt:last-child {margin-right:0}
@@ -328,7 +345,7 @@ img {width:100%; height:auto}
 .mct_05 .sop .ipfull {display:inline-block; width:100%; height:50px; line-height:50px; padding:0 10px; color:#eee; border:0; font-weight:400;  font-size:17px; background:#424242}
 .mct_05 .sop button {display:inline-block; width:100%; height:50px; line-height:50px; color:#fff; font-weight:400; border:0; font-size:17px; padding:0 10px}
 .mct_05 .agrees {width:100%}
-.mct_05 .agrees:after {display:block;visibility:hidden;clear:both;content:""}
+.mct_05 .agrees::before {display:block;visibility:hidden;clear:both;content:"";padding-top: 10px;}
 .mct_05 .agrees span {color:#fff; margin-right:20px}
 .mct_05 .agrees span:last-child {margin-right:0}
 .mct_05 .btns {width:30% ;margin:20px auto 0}
@@ -341,7 +358,7 @@ img {width:100%; height:auto}
 .mct_05 .box {width:100%}
 .mct_05 .sop {margin-bottom:10px}
 .mct_05 .sop li {width:25%; line-height:40px}
-.mct_05 .sop li:nth-child(2n) {width:75%}
+.mct_05 .sop li:nth-child(2n) {width:75%; margin-bottom: 5px;}
 .mct_05 .sop li p {font-size:1.05em}
 .mct_05 .sop li dt {margin-right:10px}
 .mct_05 .sop li dt span {font-size:1.05em}

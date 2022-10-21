@@ -11,6 +11,12 @@ class ConsultingService {
 		return consulting;
 	}
 
+	async Consultings() {
+		const consulting = await this.consultingModel.counsultings();
+		return consulting;
+	}
+	
+
 	// 카테고리 목록을 받음.
 	async getCategories() {
 		const Bigcategory = await this.categoryModel.findAll();

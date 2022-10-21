@@ -7,7 +7,7 @@ function livePress(){
     if (items.length < 30){
         for (let i = 1; i < 6; i++){
             const car_list = ['기아/셀토스','기아/모닝','기아/레이','현대/베뉴','현대/그랜저','현대/더블캡','쌍용/티볼리','제네시스/GV80','제네시스/GV70','제네시스/G80','쉐보레/트래버스','쉐보레/트레일 블레이저','쉐보레/카마로','BMW/X3','BMW/X6','벤츠/S클래스','벤츠/GLC','벤츠/GLE','벤츠/EQA','아우디/Q7','아우디/A6','폭스바겐/투아렉','폭스바겐/티구안','포드/익스플로러','포드/익스페디션','링컨/에비에이터','캐딜락/에스컬레이드','지프/랭글러','포르쉐/파나메라','포르쉐/카이엔','볼보/XC90']
-            const car_size = [['bt1','견적대기'],['bt2','견적완료']]
+            const car_size = [['bt1','상담대기'],['bt2','상담완료']]
             const randomcarSize = car_size[Math.floor(Math.random() * car_size.length)];
             const raondomData = car_list[Math.floor(Math.random() * car_list.length)];
             let today = new Date();   
@@ -31,38 +31,7 @@ function fnMove(seq){
     var offset = $("#mct_0" + seq).offset();
     $('html, body').animate({scrollTop : offset.top}, 400);
 }
-function form_Check2(){
-    if(form2.wr_name.value == ''){
-        alert("성함을 입력해주십시오.");
-        form2.wr_name.focus();
-        return false;
-    }
-    if(form2.wr_1.value == ''){
-        alert("연락처를 입력해주십시오.");
-        form2.wr_1.focus();
-        return false;
-    }
-    if(form2.wr_2.value == ''){
-        alert("차종을 입력해주십시오.");
-        form2.wr_2.focus();
-        return false;
-    }
-    if (form2.agree.checked== false){
-        alert('개인정보 수집·이용 및 취급·위탁에 동의하셔야 합니다.');
-        form2.agree.focus();
-        return false;
-    }
-    if (form2.agree2.checked== false){
-        alert('마케팅 정보 수신에 동의하셔야 합니다.');
-        form2.agree2.focus();
-        return false;
-    }
-    if(!confirm('최저가 견적 상담을 신청하시겠습니까?')) {
-        return false;
-    }
-        document.getElementById("btn_send").disabled = "disabled";
-    return true;
-}
+
 
 
 
@@ -80,101 +49,71 @@ function tick3(){
     $('.ticker_01 li:first').animate({'opacity':0}, 200, function () { $(this).appendTo($('.ticker_01')).css('opacity', 1); });
 }
 setInterval(function(){ tick3 () }, 3500);
-function form_Check3(){
-    if(form3.wr_name.value == ''){
-        alert("성함을 입력해주십시오.");
-        form3.wr_name.focus();
-        return false;
-    }
-    if(form3.wr_1.value == ''){
-        alert("연락처를 입력해주십시오.");
-        form3.wr_1.focus();
-        return false;
-    }
-    if(form3.wr_2.value == ''){
-        alert("차종을 입력해주십시오.");
-        form3.wr_2.focus();
-        return false;
-    }
-    if (form3.agree.checked== false){
-        alert('개인정보 수집·이용 및 취급·위탁에 동의하셔야 합니다.');
-        form3.agree.focus();
-        return false;
-    }
-    if (form3.agree2.checked== false){
-        alert('마케팅 정보 수신에 동의하셔야 합니다.');
-        form3.agree2.focus();
-        return false;
-    }
-    if(!confirm('최저가 견적 상담을 신청하시겠습니까?')) {
-        return false;
-    }
-        document.getElementById("btn_send").disabled = "disabled";
-        return true;
-  }
-function form_Check(){
-    if(form1.wr_1.value == ''){
-        alert("연락처를 입력해주십시오.");
-        form1.wr_1.focus();
-        return false;
-    }
-    if (form1.agree.checked== false){
-        alert('개인정보 수집·이용 및 취급·위탁에 동의하셔야 합니다.');
-        form1.agree.focus();
-        return false;
-    }
-    if (form1.agree2.checked== false){
-        alert('마케팅 정보 수신에 동의하셔야 합니다.');
-        form1.agree2.focus();
-        return false;
-    }
-    if(!confirm('빠른 무료 상담을 신청하시겠습니까?')) {
-        return false;
-    }
-    document.getElementById("btn_send").disabled = "disabled";
-    return true;
-}
 
 const btnUp = document.getElementById('up')
 btnUp.addEventListener("click", async (e) => {
-    e.preventDefault
     const name = document.getElementById('wr_name1').value
-    console.log(name)
     if (name == ''){
-        alert("성함을 입력해주십시오.");
-        name.focus();
+        swal("성함을 입력해주십시오.");
         return false;
     }
     const phone = document.getElementById('wr_phon1').value
-    console.log(phone);
     if (phone == ''){
-        alert("연락처를 입력해주십시오.");
-        phone.focus();
+        swal("연락처를 입력해주십시오.");
         return false;
     }
     const car = document.getElementById('wr_car1').value
-    console.log(car);
     if (car == ''){
-        alert("차종을 입력해주십시오.");
-        car.focus();
+        swal("차종을 입력해주십시오.");
         return false;
     }
     const selects = document.querySelector('input[name="wr_select1"]:checked').value;
-    console.log(selects)
     const agree1 = document.getElementById('agree1').checked
     if (agree1 == false){
-        alert("개인정보 수집 동의해주세요.");
-        agree1.focus();
+        swal("개인정보 수집 동의해주세요.");
         return false;
     }
     const agree2 = document.getElementById('agree2').checked
     if (agree2 == false){
-        alert("마케팅정보 수집 동의해주세요.");
-        agree2.focus();
+        swal("마케팅정보 수집 동의해주세요.");
         return false;
     }
     const { city, ip } = await Api.get('https://ipinfo.io/json?token=011cf205a26a21')
     const datas = { name, phone, car, selects, city, ip }
     const postData = await Api.post('http://localhost:8080/api/consulting', datas);
-    console.log(postData);
+    location.reload(true);
+})
+
+const btnUp2 = document.getElementById('up2')
+btnUp2.addEventListener("click", async (e) => {
+    const name = document.getElementById('wr_name2').value
+    if (name == ''){
+        swal("성함을 입력해주십시오.");
+        return false;
+    }
+    const phone = document.getElementById('wr_phon2').value
+    if (phone == ''){
+        swal("연락처를 입력해주십시오.");
+        return false;
+    }
+    const car = document.getElementById('wr_car2').value
+    if (car == ''){
+        swal("차종을 입력해주십시오.");
+        return false;
+    }
+    const selects = document.querySelector('input[name="wr_select2"]:checked').value;
+    const agree1 = document.getElementById('agree3').checked
+    if (agree1 == false){
+        swal("개인정보 수집 동의해주세요.");
+        return false;
+    }
+    const agree2 = document.getElementById('agree4').checked
+    if (agree2 == false){
+        swal("마케팅정보 수집 동의해주세요.");
+        return false;
+    }
+    const { city, ip } = await Api.get('https://ipinfo.io/json?token=011cf205a26a21')
+    const datas = { name, phone, car, selects, city, ip }
+    const postData = await Api.post('http://localhost:8080/api/consulting', datas);
+    location.reload(true);
 })

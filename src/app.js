@@ -3,6 +3,7 @@ import express from 'express';
 import {
 	viewsRouter,
 	consultingRouter,
+	userRouter,
 } from './routers';
 const app = express();
 
@@ -19,5 +20,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(viewsRouter);
 
 app.use('/api', consultingRouter);
+app.use('/api', userRouter);
 
 export { app };
