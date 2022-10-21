@@ -49,8 +49,11 @@ async function post(endpoint, data) {
 	const apiUrl = endpoint;
 	// JSON.stringify 함수: Javascript 객체를 JSON 형태로 변환함.
 	// 예시: {name: "Kim"} => {"name": "Kim"}
+
+	console.log(apiUrl)
 	
 	const body = JSON.stringify(data);
+	console.log(body);
 	const res = await fetch(apiUrl, {
 		method: 'POST',
 		headers: {

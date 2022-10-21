@@ -1,6 +1,24 @@
 
 import * as Api from '/api.js';
 
+window.onload = async function () {
+    const localData = window.localStorage.getItem('visitor')
+    if (localData == null){
+        let ip = ''
+        await fetch('https://api.ipify.org/?format=json')
+            .then(results => results.json())
+            .then(data => ip = data.ip);
+        console.log(ip);
+        const referrer = window.document.referrer
+        const usergent = window.navigator.userAgent
+        const datas = { ip, referrer, usergent }
+        console.log(datas)
+        const postData = await Api.post('http://49.247.45.148:8080/api/visitor', datas);
+        console.log(postData)
+        window.localStorage.setItem('visitor', "on")
+    }
+}
+
 function livePress(){
     const tick = document.getElementById('tick');
     const items = tick.getElementsByTagName('li');
@@ -114,7 +132,11 @@ btnUp2.addEventListener("click", async (e) => {
         swal("마케팅정보 수집 동의해주세요.");
         return false;
     }
-    const { city, ip } = await Api.get('https://ipinfo.io/json?token=011cf205a26a21')
+    let ip = ''
+    await fetch('https://api.ipify.org/?format=json')
+        .then(results => results.json())
+        .then(data => ip = data.ip);
+    console.log(ip);
     const datas = { name, phone, car, selects, city, ip }
     const postData = await Api.post('http://49.247.45.148:8080/api/consulting', datas);
     location.reload(true);

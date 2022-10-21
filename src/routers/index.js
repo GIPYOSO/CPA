@@ -3,3 +3,4 @@
 export * from './consulting-router.js';
 export * from './views-router.js';
 export * from './user-router.js';
+export * from './visitor-router.js';
