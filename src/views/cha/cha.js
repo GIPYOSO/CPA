@@ -8,6 +8,8 @@ function livePress(){
         for (let i = 1; i < 6; i++){
             const car_list = ['기아/셀토스','기아/모닝','기아/레이','현대/베뉴','현대/그랜저','현대/더블캡','쌍용/티볼리','제네시스/GV80','제네시스/GV70','제네시스/G80','쉐보레/트래버스','쉐보레/트레일 블레이저','쉐보레/카마로','BMW/X3','BMW/X6','벤츠/S클래스','벤츠/GLC','벤츠/GLE','벤츠/EQA','아우디/Q7','아우디/A6','폭스바겐/투아렉','폭스바겐/티구안','포드/익스플로러','포드/익스페디션','링컨/에비에이터','캐딜락/에스컬레이드','지프/랭글러','포르쉐/파나메라','포르쉐/카이엔','볼보/XC90']
             const car_size = [['bt1','상담대기'],['bt2','상담완료']]
+            const name_size = ['김','나','박','이','오','현','조','민','안','유','고','지','주','류','양','변','구']
+            const raondomName = name_size[Math.floor(Math.random() * name_size.length)];
             const randomcarSize = car_size[Math.floor(Math.random() * car_size.length)];
             const raondomData = car_list[Math.floor(Math.random() * car_list.length)];
             let today = new Date();   
@@ -15,8 +17,8 @@ function livePress(){
             let month = today.getMonth() + 1;  // 월
             let date = today.getDate();  // 날짜
             let day = today.getDay();  // 요일
-            const today_data = year + '.' + month + '.' + date
-            tick.innerHTML += `<li style="display: block; opacity: 1;"><span>${today_data}</span><span>${raondomData}</span><span class="${randomcarSize[0]}">${randomcarSize[1]}</span></li>`;
+            const today_data = month + '.' + date
+            tick.innerHTML += `<li style="display: block; opacity: 1;"><span>${today_data}</span><span>${raondomName}XX</span><span>${raondomData}</span><span class="${randomcarSize[0]}">${randomcarSize[1]}</span></li>`;
         }
     }
 }

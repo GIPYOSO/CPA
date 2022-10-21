@@ -21,7 +21,7 @@
       </div>
     </div><!-- END hd -->
     
-    <div class="visual">
+    <div class="visual" id="visu">
       <div class="area">
         <div class="title">
           <img class="main_img" src="../../imgs/1.png" style="margin-right: 60%;">
@@ -31,7 +31,7 @@
     </div>
     <div class="visual" style="background: #0078f0 !important; padding: 20px;">
       <div class="area">
-        <div class="box">
+        <div class="box" id="fi_box">
           <div class="sop">
             <ul>
               <li><p>성함</p></li>
@@ -49,6 +49,7 @@
                 <dl>
                   <dt><input type="radio" id="wr_select1" name="wr_select1" value="렌트" checked=""> <span>렌트</span></dt>
                   <dt><input type="radio" id="wr_select1" name="wr_select1" value="리스"> <span>리스</span></dt>
+                  <dt><input type="radio" id="wr_select1" name="wr_select1" value="현금 할부"> <span>현금 할부</span></dt>
                 </dl>
               </li>
             </ul>
@@ -58,7 +59,7 @@
             <input type="checkbox" id="agree2" name="agree2" checked=""> <span>마케팅 정보 수신에 대한 동의</span>
           </div>
           <div class="btns">
-            <button class="bg1 bgs" id="up" style="background: black !important;">최저가 견적 알아보기</button>
+            <button class="w-btn w-btn-blue" id="up" >최저가 견적 알아보기</button>
           </div>
         </div>
         </form>
@@ -75,7 +76,7 @@
         </div>
         <div class="step2">
           <div class="page" style="
-      border-radius: 10px;
+      border-radius: 10px;  border-style: outset;
   ">    
           <ul class="ticker_01" id="tick"></ul>
           </div>
@@ -84,19 +85,19 @@
     </div>
     
     <div class="mct_01" style="justify-content: center; align-content: center; display: flex;">
-      <div style="">
         <div style="float: left;">
           <div class="imgs" style="float: left; margin-bottom: 30px;">
             <img src="../../imgs/3.png">
           </div>
-          <div class="imgs">
-            <img src="../../imgs/4.png">
+          <div>
+            <div class="imgs" style="float: right; margin-bottom: 15px">
+              <img class="one" src="../../imgs/5.png" style="margin-left: 20px;">
+            </div>
+            <div class="imgs" style="float: left;">
+              <img src="../../imgs/4.png">
+            </div>
           </div>
         </div>
-        <div class="imgs" style="float: left; margin-left: 20px;">
-          <img class="one" src="../../imgs/5.png">
-        </div>
-      </div>
     </div>
   
     <div class="mct_02" style="background: #0078f0 !important">
@@ -199,6 +200,7 @@
                 <dl>
                   <dt><input type="radio" id="wr_select2" name="wr_select2" value="렌트" checked=""> <span>렌트</span></dt>
                   <dt><input type="radio" id="wr_select2" name="wr_select2" value="리스"> <span>리스</span></dt>
+                  <dt><input type="radio" id="wr_select2" name="wr_select2" value="현금 할부"> <span>현금 할부</span></dt>
                 </dl>
               </li>
             </ul>
@@ -208,7 +210,7 @@
             <input type="checkbox" id="agree4" name="agree4" checked=""> <span>마케팅 정보 수신에 대한 동의</span>
           </div>
           <div class="btns">
-            <button class="bg1" id="up2" style="background: blue;">빠른 무료 상담 받기</button>
+            <button class="w-btn w-btn-blue" id="up2" >빠른 무료 상담 받기</button>
           </div>
         </div>
         </div>
