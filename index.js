@@ -1,4 +1,3 @@
-import 'dotenv/config';
 import { app } from './src/app';
 
 // .env 파일에 예를 들어 PORT="3000" 을 작성하면, process.env.PORT가 3000이 됨
