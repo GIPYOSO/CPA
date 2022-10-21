@@ -11,7 +11,7 @@ window.onload = async function () {
         let datas = ''
         let n = 1
         for (const i of postData){
-            datas += `<tr><td>${n}</td><td>${i.ip}</td><td>${i.referrer}</td><td>${i.usergent}</td><td>${i.kr_time}</td></tr>`
+            datas += `<tr><td>${n}</td><td>${i.ip}</td><td><a href='${i.referrer}'>${i.referrer}</a></td><td>${i.usergent}</td><td>${i.kr_time}</td></tr>`
             n += 1
         }
         tables.innerHTML += datas
