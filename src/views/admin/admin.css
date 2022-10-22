@@ -10,7 +10,7 @@ body {
     margin: 0;
     font-size: 15px;
     line-height: 1.6em;
-    height: 150vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
 }

@@ -10,7 +10,7 @@ body {
     margin: 0;
     font-size: 15px;
     line-height: 1.6em;
-    height: 140vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
 }
@@ -26,8 +26,20 @@ td:nth-child(1) {width:5%}
 th:nth-child(1) {width:5%}
 td:nth-child(2) {width:15%}
 th:nth-child(2) {width:15%}
-td:nth-child(3) {width:15%}
-th:nth-child(3) {width:15%}
+td:nth-child(3) a{
+  width: 600px;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+th:nth-child(3) a{
+  width: 600px;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 td:nth-child(6) {width:8%}
 th:nth-child(6) {width:8%}
 
