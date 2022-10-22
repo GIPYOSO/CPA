@@ -336,7 +336,7 @@ img {width:100%; height:auto}
 /* .mct_05 .btns button {height:60px; line-height:60px; font-size:1.25em} */
 }
 
-.ft {padding:100px 0; background:#f8f8f8; }
+.ft {padding:100px 0; background: white; }
 .ft:after {display:block;visibility:hidden;clear:both;content:""}
 .ft .type1 {float:left; text-align:center; width:50%}
 .ft .type2 {float:left; text-align:left; width:50%}
