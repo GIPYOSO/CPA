@@ -25,7 +25,7 @@ window.onload = async function () {
         for (const i of postData){
             const ip = i.ip
             const phone = i.phone
-            datas += `<tr><td>${n}</td><td>${i.ip_count}</td><td>${i.phone_count}</td><td>${i.phone}</td><td>${i.ip}</td><td>${i.car}</td><td>${i.selects}</td><td>${i.name}</td><td>${i.kr_time}</td></tr>`
+            datas += `<tr><td>${n}</td><td>${i.ip_count}</td><td>${i.phone_count}</td><td>${i.ip}</td><td>${i.phone}</td><td>${i.car}</td><td>${i.selects}</td><td>${i.name}</td><td>${i.kr_time}</td></tr>`
             n += 1
         }
         datas = `<tbody>${datas}</tbody>`
