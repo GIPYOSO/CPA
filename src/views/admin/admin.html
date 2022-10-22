@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oracle Table example</title>
     <link rel="stylesheet" href="admin.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -15,17 +17,21 @@
           </div>
         <a href="/admin">CPA DB</a>
         <a href="/visitor">사용자 DB</a>
-        <table class="member" id="member">
-            <tr>
-                <th>번호</th>
-                <th>전화번호(IP)</th>
-                <th>상담횟수(IP)</th>
-                <th>상담횟수(HP)</th>
-                <th>차종</th>
-                <th>구매방식</th>
-                <th>이름</th>
-                <th>날짜</th>
-            </tr>
+        <table class="tbList paginated" id="products" border="1">
+            <form action="" id="setRows">
+            </form>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>전화번호(IP)</th>
+                    <th>상담횟수(IP)</th>
+                    <th>상담횟수(HP)</th>
+                    <th>차종</th>
+                    <th>구매방식</th>
+                    <th>이름</th>
+                    <th>날짜</th>
+                </tr>
+            </thead>
         </table>
     </div>
 </body>
