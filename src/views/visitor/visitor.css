@@ -16,7 +16,7 @@ body {
 }
 
 td,th{text-align: center; height: 65px; border: solid 1px;}
-th{ width: 15%; background: gray;}
+th{ width: 15%; background: gray; color: white;}
 td{ width: 15%;}
 table {
     border-collapse: separate;
