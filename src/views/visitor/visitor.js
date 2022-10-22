@@ -9,10 +9,10 @@ window.onload = async function () {
         postData = postData.reverse()
         const tables = document.getElementById('products')
         let datas = ''
-        let n = 1
+        let n = postData.length
         for (const i of postData){
             datas += `<tr><td>${n}</td><td>${i.ip}</td><td><a href='${i.referrer}'>${i.referrer}</a></td><td>${i.browser}</td><td>${i.os}</td><td>${i.kr_time}</td></tr>`
-            n += 1
+            n -= 1
         }
         datas = `<tbody>${datas}</tbody>`
         tables.innerHTML += datas
