@@ -96,3 +96,21 @@ function sayHi() {
   }
   
 setTimeout(sayHi, 500);
+
+
+const cpaButton = document.getElementById('CPA')
+const visitorButton = document.getElementById('VISITOR')
+const logoutButton = document.getElementById('LOGOUT')
+
+cpaButton.addEventListener("click", () => {
+    location.href = '/admin'
+})
+
+visitorButton.addEventListener("click", () => {
+    location.href = '/visitor'
+})
+
+logoutButton.addEventListener("click", () => {
+    window.localStorage.removeItem('user');
+    location.reload()
+})

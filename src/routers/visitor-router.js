@@ -11,14 +11,16 @@ visitorRouter.post('/visitor', async (req, res, next) => {
 		// req (request)의 body 에서 데이터 가져오기
 		const ip = req.body.ip;
 		const referrer = req.body.referrer;
-		const usergent = req.body.usergent;
+		const browser = req.body.browseer;
+		const os = req.body.os;
+
 
 		// 위 데이터를 유저 db에 추가하기
 		const newVisitor = await visitorService.visitorAdd({
 			ip,
 			referrer,
-			usergent,
-
+			browser,
+			os
 		});
 
 		res.status(201).json(newVisitor);

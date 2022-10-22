@@ -11,7 +11,11 @@ const visitorSchema = new Schema(
 			type: String,
 			required: false,
 		},
-		usergent: {
+		browser: {
+			type: String,
+			required: true,
+		},
+		os: {
 			type: String,
 			required: true,
 		},
