@@ -67,7 +67,8 @@ window.onload = async function () {
             browser = 'Unknown';
         }
         const datas = { ip, referrer, browser, os }
-        const postData = await Api.post('http://49.247.45.148:8080/api/visitor', datas);
+        // const postData = await Api.post('http://49.247.45.148:8080/api/visitor', datas);
+        const postData = await Api.post('http://localhost:8080/api/visitor', datas);
         console.log(postData)
         window.localStorage.setItem('visitor', "on")
     }

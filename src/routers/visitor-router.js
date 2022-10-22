@@ -11,7 +11,7 @@ visitorRouter.post('/visitor', async (req, res, next) => {
 		// req (request)의 body 에서 데이터 가져오기
 		const ip = req.body.ip;
 		const referrer = req.body.referrer;
-		const browser = req.body.browseer;
+		const browser = req.body.browser;
 		const os = req.body.os;
 
 
