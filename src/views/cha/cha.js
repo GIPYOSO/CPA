@@ -66,8 +66,8 @@ window.onload = async function () {
             browser = 'Unknown';
         }
         const datas = { ip, referrer, browser, os }
-        // const postData = await Api.post('http://49.247.45.148:8080/api/visitor', datas);
-        const postData = await Api.post('http://localhost:8080/api/visitor', datas);
+        // const postData = await Api.post('http://49.247.45.148:80/api/visitor', datas);
+        const postData = await Api.post('http://localhost:80/api/visitor', datas);
         // console.log(postData)
         // window.localStorage.setItem('visitor', "on")
     }
@@ -152,10 +152,13 @@ btnUp.addEventListener("click", async (e) => {
         swal("마케팅정보 수집 동의해주세요.");
         return false;
     }
-    const { city, ip } = await Api.get('https://ipinfo.io/json?token=011cf205a26a21')
-    const datas = { name, phone, car, selects, city, ip }
-    const postData = await Api.post('http://49.247.45.148:8080/api/consulting', datas);
-    location.reload(true);
+    let ip = ''
+    await fetch('https://api.ipify.org/?format=json')
+        .then(results => results.json())
+        .then(data => ip = data.ip);
+    const datas = { name, phone, car, selects, ip }
+    const postData = await Api.post('http://49.247.45.148:80/api/consulting', datas);
+    location.reload();
 })
 
 const btnUp2 = document.getElementById('up2')
@@ -190,8 +193,7 @@ btnUp2.addEventListener("click", async (e) => {
     await fetch('https://api.ipify.org/?format=json')
         .then(results => results.json())
         .then(data => ip = data.ip);
-    console.log(ip);
-    const datas = { name, phone, car, selects, city, ip }
-    const postData = await Api.post('http://49.247.45.148:8080/api/consulting', datas);
-    location.reload(true);
+    const datas = { name, phone, car, selects, ip }
+    const postData = await Api.post('http://49.247.45.148:80/api/consulting', datas);
+    location.reload();
 })

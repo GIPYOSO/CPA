@@ -4,7 +4,7 @@ import * as Api from '/api.js';
 window.onload = async function () {
     const localData = window.localStorage.getItem('user')
     if (localData != null){
-        let postData = await Api.get('http://49.247.45.148:8080/api/consultings');
+        let postData = await Api.get('http://49.247.45.148:80/api/consultings');
         const phone_list = []
         const ip_list = []
         for (const i of postData){

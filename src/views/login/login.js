@@ -16,7 +16,7 @@ login.addEventListener("click", async (e) => {
         return false;
     }
     const datas = { id, pw }
-    const postData = await Api.post('http://49.247.45.148:8080/api/login', datas);
+    const postData = await Api.post('http://49.247.45.148:80/api/login', datas);
     if (postData.status == 200){
         const token = postData.result
         window.localStorage.setItem('user', token)
