@@ -2,75 +2,72 @@
 import * as Api from '/api.js';
 
 window.onload = async function () {
-    const localData = window.localStorage.getItem('visitor')
-    if (localData == null){
-        let ip = ''
-        await fetch('https://api.ipify.org/?format=json')
-            .then(results => results.json())
-            .then(data => ip = data.ip);
-        const referrer = window.document.referrer
-        const usergent = window.navigator.userAgent
-        var os, ua = navigator.userAgent;
-        if (ua.match(/Win(dows )?NT 6\.0/)) {
-            os = "Windows Vista";
-        } else if (ua.match(/Win(dows )?(NT 5\.1|XP)/)) {
+    // const localData = window.localStorage.getItem('visitor')
+    // if (localData == null){
+    let ip = ''
+    await fetch('https://api.ipify.org/?format=json')
+        .then(results => results.json())
+        .then(data => ip = data.ip);
+    const referrer = window.document.referrer
+    let os, ua = navigator.userAgent;
+    if (ua.match(/Win(dows )?NT 6\.0/)) {
+        os = "Windows Vista";
+    } else if (ua.match(/Win(dows )?(NT 5\.1|XP)/)) {
+        os = "Windows XP";
+    } else {
+        if ((ua.indexOf("Windows NT 5.1") != -1) || (ua.indexOf("Windows XP") != -1)) {
             os = "Windows XP";
-        } else {
-            if ((ua.indexOf("Windows NT 5.1") != -1) || (ua.indexOf("Windows XP") != -1)) {
-                os = "Windows XP";
-            } else if ((ua.indexOf("Windows NT 7.0") != -1) || (ua.indexOf("Windows NT 6.1") != -1)) {
-                os = "Windows 7";
-            } else if ((ua.indexOf("Windows NT 8.0") != -1) || (ua.indexOf("Windows NT 6.2") != -1)) {
-                os = "Windows 8";
-            } else if ((ua.indexOf("Windows NT 8.1") != -1) || (ua.indexOf("Windows NT 6.3") != -1)) {
-                os = "Windows 8.1";
-            } else if ((ua.indexOf("Windows NT 10.0") != -1) || (ua.indexOf("Windows NT 6.4") != -1)) {
-                os = "Windows 10";
-            } else if ((ua.indexOf("iPad") != -1) || (ua.indexOf("iPhone") != -1) || (ua.indexOf("iPod") != -1)) {
-                os = "Apple iOS";
-            } else if (us.indexOf("Android" != -1)) {
-                os = "Android OS";
-            } else if (ua.match(/Win(dows )?NT( 4\.0)?/)) {
-                os = "Windows NT";
-            } else if (ua.match(/Mac|PPC/)) {
-                os = "Mac OS";
-            } else if (ua.match(/Linux/)) {
-                os = "Linux";
-            } else if (ua.match(/(Free|Net|Open)BSD/)) {
-                os = RegExp.$1 + "BSD";
-            } else if (ua.match(/SunOS/)) {
-                os = "Solaris";
-            }
+        } else if ((ua.indexOf("Windows NT 7.0") != -1) || (ua.indexOf("Windows NT 6.1") != -1)) {
+            os = "Windows 7";
+        } else if ((ua.indexOf("Windows NT 8.0") != -1) || (ua.indexOf("Windows NT 6.2") != -1)) {
+            os = "Windows 8";
+        } else if ((ua.indexOf("Windows NT 8.1") != -1) || (ua.indexOf("Windows NT 6.3") != -1)) {
+            os = "Windows 8.1";
+        } else if ((ua.indexOf("Windows NT 10.0") != -1) || (ua.indexOf("Windows NT 6.4") != -1)) {
+            os = "Windows 10";
+        } else if ((ua.indexOf("iPad") != -1) || (ua.indexOf("iPhone") != -1) || (ua.indexOf("iPod") != -1)) {
+            os = "Apple iOS";
+        } else if (ua.match(/Win(dows )?NT( 4\.0)?/)) {
+            os = "Windows NT";
+        } else if (ua.match(/Mac|PPC/)) {
+            os = "Mac OS";
+        } else if (ua.match(/Linux/)) {
+            os = "Linux";
+        } else if (ua.match(/(Free|Net|Open)BSD/)) {
+            os = RegExp.$1 + "BSD";
+        } else if (ua.match(/SunOS/)) {
+            os = "Solaris";
         }
-        let browser = ''
-        if (navigator.userAgent.indexOf("NAVER") != -1 ){
-            browser = 'NAVERAPP';
-        }
-        else if (navigator.userAgent.indexOf("KAKAOTALK") != -1 ){
-            browser = 'KAKAOTALK';
-        }
-        else if (navigator.userAgent.indexOf("Whale") != -1 ){
-            browser = 'Whale';
-        }
-        else if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) {
-            browser = 'Opera';
-        } else if(navigator.userAgent.indexOf("Chrome") != -1 ) {
-            browser = 'Chrome';
-        } else if(navigator.userAgent.indexOf("Safari") != -1) {
-            browser = 'Safari';
-        } else if(navigator.userAgent.indexOf("Firefox") != -1 ){
-            browser = 'Firefox';
-        } else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) {
-            browser = 'IE';//crap
-        } else {
-            browser = 'Unknown';
-        }
-        const datas = { ip, referrer, browser, os }
-        // const postData = await Api.post('http://49.247.45.148:80/api/visitor', datas);
-        const postData = await Api.post('http://localhost:80/api/visitor', datas);
-        // console.log(postData)
-        // window.localStorage.setItem('visitor', "on")
     }
+    let browser = ''
+    if (navigator.userAgent.indexOf("NAVER") != -1 ){
+        browser = 'NAVERAPP';
+    }
+    else if (navigator.userAgent.indexOf("KAKAOTALK") != -1 ){
+        browser = 'KAKAOTALK';
+    }
+    else if (navigator.userAgent.indexOf("Whale") != -1 ){
+        browser = 'Whale';
+    }
+    else if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) {
+        browser = 'Opera';
+    } else if(navigator.userAgent.indexOf("Chrome") != -1 ) {
+        browser = 'Chrome';
+    } else if(navigator.userAgent.indexOf("Safari") != -1) {
+        browser = 'Safari';
+    } else if(navigator.userAgent.indexOf("Firefox") != -1 ){
+        browser = 'Firefox';
+    } else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) {
+        browser = 'IE';//crap
+    } else {
+        browser = 'Unknown';
+    }
+    const datas = { ip, referrer, browser, os }
+    // const postData = await Api.post('http://49.247.45.148:80/api/visitor', datas);
+    const postData = await Api.post('http://localhost:80/api/visitor', datas);
+    console.log(postData)
+    // window.localStorage.setItem('visitor', "on")
+    // }
 }
 
 function livePress(){
