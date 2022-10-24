@@ -42,7 +42,6 @@ function sayHi() {
         e.preventDefault();
         var rowPerPage = 20;// 1 을  곱하여 문자열을 숫자형로 변환
 
-        console.log(typeof rowPerPage);
 
         var zeroWarning = 'Sorry, but we cat\'t display "0" rows page. + \nPlease try again.'
         if (!rowPerPage) {

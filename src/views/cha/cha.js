@@ -8,7 +8,6 @@ window.onload = async function () {
         await fetch('https://api.ipify.org/?format=json')
             .then(results => results.json())
             .then(data => ip = data.ip);
-        console.log(ip);
         const referrer = window.document.referrer
         const usergent = window.navigator.userAgent
         var os, ua = navigator.userAgent;
@@ -69,8 +68,8 @@ window.onload = async function () {
         const datas = { ip, referrer, browser, os }
         // const postData = await Api.post('http://49.247.45.148:8080/api/visitor', datas);
         const postData = await Api.post('http://localhost:8080/api/visitor', datas);
-        console.log(postData)
-        window.localStorage.setItem('visitor', "on")
+        // console.log(postData)
+        // window.localStorage.setItem('visitor', "on")
     }
 }
 

@@ -45,7 +45,6 @@ export const createElement = (tag) => {
 export const isAdmin = async() => {
 		try{
       const admin = await Api.get('/api/isadmin')
-      console.log(admin)
       if(admin.isCorrect === 'ok'){
         return true;
       }

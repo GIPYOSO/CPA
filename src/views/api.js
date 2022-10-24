@@ -7,7 +7,6 @@ async function get(endpoint, params = '') {
 			"user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
 		},
 	});
-	console.log(res)
 	// 응답 코드가 4XX 계열일 때 (400, 403 등)
 	if (!res.ok) {
 		const errorContent = await res.json();
@@ -50,10 +49,8 @@ async function post(endpoint, data) {
 	// JSON.stringify 함수: Javascript 객체를 JSON 형태로 변환함.
 	// 예시: {name: "Kim"} => {"name": "Kim"}
 
-	console.log(apiUrl)
-	
+
 	const body = JSON.stringify(data);
-	console.log(body);
 	const res = await fetch(apiUrl, {
 		method: 'POST',
 		headers: {
@@ -61,7 +58,6 @@ async function post(endpoint, data) {
 		},
 		body,
 	});
-	console.log(res)
 
 	// 응답 코드가 4XX 계열일 때 (400, 403 등)
 	if (!res.ok) {

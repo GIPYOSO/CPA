@@ -15,7 +15,6 @@ export class ConsultingModel {
 			...data,
 			kr_time : kr_curr
 		}
-		console.log(data)
 		const NewConsulting = await Consulting.create(data);
 		return NewConsulting;
 	}
