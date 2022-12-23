@@ -2,6 +2,8 @@
 import * as Api from '/api.js';
 
 window.onload = async function () {
+    
+
     // const localData = window.localStorage.getItem('visitor')
     // if (localData == null){
     let ip = ''
