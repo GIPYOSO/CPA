@@ -42,7 +42,7 @@ body{
 .menu nav ul li:last-child{
   border-right: 1px solid #55595c;
 }
-.menu a > span{
+.menu > span{
   color: #fff; line-height: 40px;
 }
 thead{
