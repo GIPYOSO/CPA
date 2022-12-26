@@ -122,7 +122,7 @@ function tick3(){
 }
 setInterval(function(){ tick3 () }, 3500);
 
-const btnUp = document.getElementById('up')
+const btnUp = document.getElementById('#alertStart')
 btnUp.addEventListener("click", async (e) => {
     const name = document.getElementById('wr_name1').value
     if (name == ''){
@@ -154,12 +154,19 @@ btnUp.addEventListener("click", async (e) => {
     await fetch('https://api.ipify.org/?format=json')
         .then(results => results.json())
         .then(data => ip = data.ip);
+        Swal.fire({
+            icon: 'success',
+            title: '문의가 접수되었습니다.'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.reload();
+            }
+        })
     const datas = { name, phone, car, selects, ip }
     const postData = await Api.post('http://49.247.45.148:80/api/consulting', datas);
-    location.reload();
 })
 
-const btnUp2 = document.getElementById('up2')
+const btnUp2 = document.getElementById('#alertStart2')
 btnUp2.addEventListener("click", async (e) => {
     const name = document.getElementById('wr_name2').value
     if (name == ''){
@@ -191,7 +198,14 @@ btnUp2.addEventListener("click", async (e) => {
     await fetch('https://api.ipify.org/?format=json')
         .then(results => results.json())
         .then(data => ip = data.ip);
+        Swal.fire({
+            icon: 'success',
+            title: '문의가 접수되었습니다.'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.reload();
+            }
+        })
     const datas = { name, phone, car, selects, ip }
     const postData = await Api.post('http://49.247.45.148:80/api/consulting', datas);
-    location.reload();
 })

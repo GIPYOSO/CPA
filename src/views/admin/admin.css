@@ -21,8 +21,11 @@ body {
   height: 40px;
 }
 .menu h1{
-  color: #fff; font-size: 16px; font-family:"Gothic"; float: left; width: 230px;
+  font-size: 16px; font-family:"Gothic"; float: left; width: 230px;
   text-align: center; margin: 0; line-height: 40px;
+}
+.menu h1 a{
+  color: #fff; text-decoration: none;
 }
 .menu h1 span{
   color: #3CF;

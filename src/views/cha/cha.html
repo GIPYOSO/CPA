@@ -5,11 +5,11 @@
   <meta name="format-detection" content="telephone=no">
   <title>Bb 장기렌트카</title>
   <link rel="stylesheet" href="cha.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <body>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-  
-  
+
   <div id="wrap">
     <div class="hd">
       <div class="area">
@@ -44,7 +44,7 @@
               <li><p>성함</p></li>
               <li><input type="text" id="wr_name1" name="wr_name1" class="ipfull" placeholder="이름을 입력하세요"></li>
               <li><p>연락처</p></li>
-              <li><input type="tel" id="telInput" name="wr_phon1" class="ipfull"  maxlength="13" placeholder="'-'를 제외하고 010포함 숫자만 입력하세요." pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}"> <!-- oninput="oninputPhone(this)" -->
+              <li><input type="tel" id="wr_phon1" name="wr_phon1" class="ipfull"  maxlength="13" placeholder="'-'를 제외하고 010포함 숫자만 입력하세요." pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}"> <!-- oninput="oninputPhone(this)" -->
                 <span class="valid" th:text="${valid_tel}"> <br> </span></li>
             </ul>
           </div>
@@ -67,7 +67,7 @@
             <input type="checkbox" id="agree2" name="agree2" checked=""> <span>마케팅 정보 수신에 대한 동의</span>
           </div>
           <div class="btns" style="font-size: 18px;">
-            <button class="w-btn w-btn-blue" id="up" style=" background-color: #0072ff;">최저가 문의하기</button>
+            <button class="w-btn w-btn-blue" id="#alertStart" style=" background-color: #0072ff;">최저가 문의하기</button>
           </div>
         </div>
         </form>
@@ -185,7 +185,7 @@
               <li><p>성함</p></li>
               <li><input type="text" id="wr_name2" name="wr_name2" class="ipfull" placeholder="이름을 입력하세요" style="border-radius: 10px;"></li>
               <li><p>연락처</p></li>
-              <li><input type="tel" id="telInput2" name="wr_phon2" class="ipfull" maxlength="13" placeholder="'-'를 제외하고 010포함 숫자만 입력하세요." pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}" style="border-radius: 10px;"></li> <!-- oninput="oninputPhone(this)" -->
+              <li><input type="tel" id="wr_phon2" name="wr_phon2" class="ipfull" maxlength="13" placeholder="'-'를 제외하고 010포함 숫자만 입력하세요." pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}" style="border-radius: 10px;"></li> <!-- oninput="oninputPhone(this)" -->
             </ul>
           </div>
           <div class="sop">
@@ -209,7 +209,7 @@
             <input type="checkbox" id="agree4" name="agree4" checked=""> <span>마케팅 정보 수신에 대한 동의</span>
           </div>
           <div class="btns" style="font-size: 18px;">
-            <button class="w-btn w-btn-blue" id="up2" style=" background-color: #0072ff;">최저가 문의하기</button>
+            <button class="w-btn w-btn-blue" id="#alertStart2" style=" background-color: #0072ff;">최저가 문의하기</button>
           </div>
         </div>
         </div>
@@ -236,13 +236,13 @@
     
   <script> 
   /* ! 연락처 자동 "-"입력 코드 */
-  $('#telInput').keyup(function (event) {
+  $('#wr_phon1').keyup(function (event) {
   event = event || window.event;
   var _val = this.value.trim();
   this.value = autoHypenTel(_val);
 });
 
-$('#telInput2').keyup(function (event) {
+$('#wr_phon2').keyup(function (event) {
   event = event || window.event;
   var _val = this.value.trim();
   this.value = autoHypenTel(_val);

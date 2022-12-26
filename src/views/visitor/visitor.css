@@ -1,11 +1,11 @@
 /* Google Web Font */
-@font-face {
+@font-face{
   font-family: 'SuseongDotum';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/SuseongDotum.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
-body {
+body{
     font-family: 'SuseongDotum', sans-serif;
     margin: 0;
     font-size: 15px;
@@ -15,13 +15,16 @@ body {
 .logo{
   margin-bottom: 20px;
 }
-.menu {
+.menu{
   margin-bottom: 40px; background: #34383c; min-width: 1900px; width: 100%;
   height: 40px;
 }
 .menu h1{
-  color: #fff; font-size: 16px; font-family:"Gothic"; float: left; width: 230px;
+  font-size: 16px; font-family:"Gothic"; float: left; width: 230px;
   text-align: center; margin: 0; line-height: 40px;
+}
+.menu h1 a{
+  color: #fff; text-decoration: none;
 }
 .menu h1 span{
   color: #3CF;
@@ -39,7 +42,7 @@ body {
 .menu nav ul li:last-child{
   border-right: 1px solid #55595c;
 }
-.menu > span{
+.menu a > span{
   color: #fff; line-height: 40px;
 }
 thead{
@@ -51,14 +54,14 @@ td,th{text-align: center; height: 65px;}
 th{ width: 10%; background: #c8c8c8c8; color: #000; font-weight: normal;}
 td{ width: 10%;}
 tr:nth-child(2n){background-color: #f8f8f8;}
-table {
+table{
     border-collapse: separate;
     border-spacing: 0px;
 }
-td:nth-child(1) { width: 5%;}
-th:nth-child(1) { width: 5%;}
-td:nth-child(2) { width: 18%;}
-th:nth-child(2) { width: 18%;}
+td:nth-child(1){ width: 5%;}
+th:nth-child(1){ width: 5%;}
+td:nth-child(2){ width: 18%;}
+th:nth-child(2){ width: 18%;}
 th:nth-child(3),
 td:nth-child(3){
   padding: 0 2%; width: 700px;
@@ -77,39 +80,45 @@ th:nth-child(3) a{
   text-overflow: ellipsis;
   overflow: hidden;
 }
-td:nth-child(6) {width:10%}
-th:nth-child(6) {width:10%}
+td:nth-child(6){width:10%}
+th:nth-child(6){width:10%}
 
-form {
+form{
 	width: 500px;
 }
-table {
+table{
   border: 1px solid #c8c8c8;
 	border-collapse:collapse;
 	margin-bottom: 50px;
 }
 
-.off-screen {
+.off-screen{
 	display: none;
 }
-#nav {
+#nav{
 	text-align: center;
 }
-#nav a {
-	display: inline-block;
-	padding: 3px 5px;
+#nav a{
+	display: inline-block; margin-bottom: 50px;
+  width: 25px; 
+  padding: 5px;
 	margin-right: 10px;
 	font-family:Tahoma;
-	background: #ccc;
 	color: #000;
 	text-decoration: none;
 }
-#nav a.active {
-	background: #333;
-	color: #fff;
+#nav a:hover{
+	background: #f2f2f2; box-shadow: 0 4px 6px -1px rgba(0, 0, 0);
+  border-radius: 30px;
+}
+#nav a.active{
+	background: #f2f2f2;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0);
+  border-radius: 30px;
+	color: #333;
 }
 
-button {
+button{
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -135,7 +144,7 @@ button {
   transition: 0.5s;
 }
 
-button {
+button{
   --button-hover-bg-color: #218838;
 }
 
