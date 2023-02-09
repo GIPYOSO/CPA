@@ -51,7 +51,7 @@ function sayHi() {
         $('#nav').remove();
         var $products = $('#products');
 
-        $products.after('<div id="nav">');
+        $products.after('<a href="#">이전</a>','<div id="nav">', '<a href="#">다음</a>');
 
 
         var $tr = $($products).find('tbody tr');

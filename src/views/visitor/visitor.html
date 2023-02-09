@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="visitor.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
+    <script type="module" src="visitor.js"></script>
 </head>
 <body>
     <header class="menu">
@@ -28,11 +28,12 @@
             <button id="LOGOUT">로그아웃</button>
         </span>
     </header>
-    <div style="min-width: 1300px; margin: 0 15.703125%;"" >
+    
+    <div style="min-width: 1300px; margin: 0 15.703125%;">
         <div class="logo" style="text-align: center;">
             <a href="/"><img src="../../imgs/logo.png" style="width: 230px; height: 100px;"></a>
           </div>
-        <table class="member" id="products">
+        <table class="tbList paginated" id="products">
             <form action="" id="setRows">
             </form>
             <thead>
@@ -48,5 +49,5 @@
         </table>
     </div>
 </body>
-<script type="module" src="visitor.js"></script>
+
 </html>
